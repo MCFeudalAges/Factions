@@ -2,6 +2,8 @@ package com.massivecraft.factions.cmd;
 
 import java.util.List;
 
+import com.github.nowireless.factions.cmd.CmdFactionsRegionCreate;
+import com.github.nowireless.factions.cmd.CmdFactionsRegionDissolve;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.Perm;
 import com.massivecraft.factions.entity.MConf;
@@ -50,6 +52,8 @@ public class CmdFactions extends FCommand
 	public CmdFactionsAdmin cmdFactionsAdmin = new CmdFactionsAdmin();
 	public CmdFactionsPowerBoost cmdFactionsPowerBoost = new CmdFactionsPowerBoost();
 	public VersionCommand cmdFactionsVersion = new VersionCommand(Factions.get(), Perm.VERSION.node, "v", "version");
+	public CmdFactionsRegionCreate cmdFactionsRegionCreate = new CmdFactionsRegionCreate();
+	public CmdFactionsRegionDissolve cmdFactionsRegionDissolve = new CmdFactionsRegionDissolve();
 	
 	// -------------------------------------------- //
 	// CONSTRUCT
@@ -95,6 +99,8 @@ public class CmdFactions extends FCommand
 		this.addSubCommand(this.cmdFactionsAdmin);
 		this.addSubCommand(this.cmdFactionsPowerBoost);
 		this.addSubCommand(this.cmdFactionsVersion);
+		this.addSubCommand(this.cmdFactionsRegionCreate);
+		this.addSubCommand(this.cmdFactionsRegionDissolve);
 		
 		// Misc
 		this.setDesc("The faction base command");

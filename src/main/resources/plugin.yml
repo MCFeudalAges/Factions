@@ -19,6 +19,7 @@ permissions:
   factions.claim: {description: claim land where you stand, default: false}
   factions.claim.radius: {description: claim land with radius, default: false}
   factions.create: {description: create new faction, default: false}
+  factions.createregion: {description: create new region, default: false}
   factions.demote: {description: demote lesser members in your faction, default: false}
   factions.description: {description: change faction description, default: false}
   factions.disband: {description: disband faction, default: false}
@@ -51,6 +52,7 @@ permissions:
   factions.player: {description: show player information}
   factions.powerboost: {description: set powerboost, default: false}
   factions.promote: {description: promote lesser members in your faction, default: false}
+  factions.regiondissolve: {description: dissolve a region, default: false}
   factions.relation: {description: set relation wish to another faction, default: false}
   factions.seechunk: {description: see the chunk you stand in, default: false}
   factions.sethome: {description: set the faction home, default: false}
@@ -74,6 +76,7 @@ permissions:
       factions.claim: true
       factions.claim.radius: true
       factions.create: true
+      factions.createregion: true
       factions.demote: true
       factions.description: true
       factions.disband: true
@@ -106,6 +109,7 @@ permissions:
       factions.player: true
       factions.powerboost: true
       factions.promote: true
+      factions.regiondissolve: true
       factions.relation: true
       factions.seechunk: true
       factions.sethome: true
