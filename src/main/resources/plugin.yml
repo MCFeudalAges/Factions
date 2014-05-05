@@ -52,7 +52,9 @@ permissions:
   factions.player: {description: show player information}
   factions.powerboost: {description: set powerboost, default: false}
   factions.promote: {description: promote lesser members in your faction, default: false}
+  factions.regionaddchunk: {description: add an chunk to a region, default: false}
   factions.regiondissolve: {description: dissolve a region, default: false}
+  factions.regionremovechunk: {description: removes a chunk from a region, default: false}
   factions.relation: {description: set relation wish to another faction, default: false}
   factions.seechunk: {description: see the chunk you stand in, default: false}
   factions.sethome: {description: set the faction home, default: false}
@@ -109,7 +111,9 @@ permissions:
       factions.player: true
       factions.powerboost: true
       factions.promote: true
+      factions.regionaddchunk: true
       factions.regiondissolve: true
+      factions.regionremovechunk: true
       factions.relation: true
       factions.seechunk: true
       factions.sethome: true

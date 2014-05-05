@@ -1,5 +1,8 @@
 package com.massivecraft.factions;
 
+import com.github.nowireless.factions.adapter.RegionBoardAdapter;
+import com.github.nowireless.factions.adapter.RegionBoardMapAdapter;
+import com.github.nowireless.factions.entity.RegionBoard;
 import com.github.nowireless.factions.entity.RegionBoardCollections;
 import com.github.nowireless.factions.entity.RegionCollections;
 import com.massivecraft.factions.adapter.BoardAdapter;
@@ -180,6 +183,8 @@ public class Factions extends MPlugin
 		.registerTypeAdapter(Rel.class, RelAdapter.get())
 		.registerTypeAdapter(FPerm.class, FPermAdapter.get())
 		.registerTypeAdapter(FFlag.class, FFlagAdapter.get())
+		.registerTypeAdapter(RegionBoard.class, RegionBoardMapAdapter.get())
+		.registerTypeAdapter(RegionBoard.MAP_TYPE, RegionBoardAdapter.get())
 		;
 	}
 	
