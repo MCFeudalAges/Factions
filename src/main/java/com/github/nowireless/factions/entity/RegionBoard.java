@@ -11,11 +11,9 @@ import java.util.concurrent.ConcurrentSkipListMap;
 
 import net.minecraft.util.io.netty.handler.codec.http.websocketx.ContinuationWebSocketFrame;
 
+import com.github.nowireless.factions.Factions;
 import com.github.nowireless.factions.RegionAccess;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.RelationParticipator;
-import com.massivecraft.factions.entity.Faction;
-import com.massivecraft.factions.entity.UConf;
+import com.github.nowireless.factions.RelationParticipator;
 import com.massivecraft.massivecore.ps.PS;
 import com.massivecraft.massivecore.store.Entity;
 import com.massivecraft.massivecore.xlib.gson.reflect.TypeToken;

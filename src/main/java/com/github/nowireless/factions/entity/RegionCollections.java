@@ -1,8 +1,7 @@
 package com.github.nowireless.factions.entity;
 
-import com.massivecraft.factions.Const;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.entity.XColls;
+import com.github.nowireless.factions.Const;
+import com.github.nowireless.factions.Factions;
 import com.massivecraft.massivecore.Aspect;
 
 public class RegionCollections  extends XColls<RegionCollection, Region>{

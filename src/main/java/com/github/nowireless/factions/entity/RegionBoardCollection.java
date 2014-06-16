@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.github.nowireless.factions.Factions;
 import com.github.nowireless.factions.RegionAccess;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.RelationParticipator;
-import com.massivecraft.factions.entity.Faction;
+import com.github.nowireless.factions.RelationParticipator;
 import com.massivecraft.massivecore.ps.PS;
 import com.massivecraft.massivecore.store.Coll;
 import com.massivecraft.massivecore.store.MStore;

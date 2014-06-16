@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.entity.BoardColls;
-import com.massivecraft.factions.entity.UConf;
-import com.massivecraft.factions.entity.UPlayerColls;
-import com.massivecraft.factions.util.MiscUtil;
+import com.github.nowireless.factions.Factions;
+import com.github.nowireless.factions.util.MiscUtil;
+//import com.massivecraft.factions.entity.BoardColls;
 import com.massivecraft.massivecore.store.Coll;
 import com.massivecraft.massivecore.store.MStore;
 import com.massivecraft.massivecore.util.Txt;
@@ -34,7 +32,7 @@ public class RegionCollection extends Coll<Region>{
 			String msg = Txt.parse("<b>Non existing regionID <h>%s requested. <i>Cleaning all boards and uplayers", this.fixId(oid));
 			Factions.get().log(msg);
 
-			BoardColls.get().clean();
+			//BoardColls.get().clean();
 			UPlayerColls.get().clean();
 			//TODO 
 			//RegionMapColls.get().clean();

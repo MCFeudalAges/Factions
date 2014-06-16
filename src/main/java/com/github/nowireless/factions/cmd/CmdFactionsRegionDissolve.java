@@ -1,13 +1,12 @@
 package com.github.nowireless.factions.cmd;
 
+import com.github.nowireless.factions.Factions;
+import com.github.nowireless.factions.Perm;
 import com.github.nowireless.factions.cmd.arg.ARRegion;
+import com.github.nowireless.factions.cmd.req.ReqFactionsEnabled;
 import com.github.nowireless.factions.entity.Region;
+import com.github.nowireless.factions.entity.UConf;
 import com.github.nowireless.factions.event.FactionsEventRegionDestroy;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.Perm;
-import com.massivecraft.factions.cmd.FCommand;
-import com.massivecraft.factions.cmd.req.ReqFactionsEnabled;
-import com.massivecraft.factions.entity.UConf;
 import com.massivecraft.massivecore.cmd.req.ReqHasPerm;
 import com.massivecraft.massivecore.util.Txt;
 

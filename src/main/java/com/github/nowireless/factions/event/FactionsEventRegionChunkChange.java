@@ -4,7 +4,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.event.HandlerList;
 
 import com.github.nowireless.factions.entity.Region;
-import com.massivecraft.factions.event.FactionsEventAbstractSender;
 import com.massivecraft.massivecore.ps.PS;
 
 public class FactionsEventRegionChunkChange  extends FactionsEventAbstractSender {

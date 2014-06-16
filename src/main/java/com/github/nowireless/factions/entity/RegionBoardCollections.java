@@ -5,12 +5,10 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.github.nowireless.factions.Const;
+import com.github.nowireless.factions.Factions;
 import com.github.nowireless.factions.RegionAccess;
-import com.massivecraft.factions.Const;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.RelationParticipator;
-import com.massivecraft.factions.entity.Faction;
-import com.massivecraft.factions.entity.XColls;
+import com.github.nowireless.factions.RelationParticipator;
 import com.massivecraft.massivecore.Aspect;
 import com.massivecraft.massivecore.ps.PS;
 

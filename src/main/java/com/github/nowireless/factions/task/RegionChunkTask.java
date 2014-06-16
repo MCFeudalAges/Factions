@@ -6,9 +6,11 @@ import org.bukkit.Bukkit;
 
 
 
+
+
+import com.github.nowireless.factions.Factions;
+import com.github.nowireless.factions.entity.Faction;
 import com.github.nowireless.factions.entity.Region;
-import com.massivecraft.factions.Factions;
-import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.massivecore.ps.PS;
 
 public abstract class RegionChunkTask implements Runnable {

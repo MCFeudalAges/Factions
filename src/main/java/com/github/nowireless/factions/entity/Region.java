@@ -1,9 +1,7 @@
 package com.github.nowireless.factions.entity;
 
-import com.massivecraft.factions.entity.BoardColls;
-import com.massivecraft.factions.entity.UConf;
-import com.massivecraft.factions.entity.UPlayerColls;
-import com.massivecraft.factions.util.MiscUtil;
+//import com.massivecraft.factions.entity.BoardColls;
+import com.github.nowireless.factions.util.MiscUtil;
 import com.massivecraft.massivecore.store.Entity;
 import com.massivecraft.massivecore.util.MUtil;
 
@@ -31,7 +29,7 @@ public class Region extends Entity<Region>{
 		String universe = this.getUniverse();
 
 		// Clean the board
-		BoardColls.get().getForUniverse(universe).clean();
+		//BoardColls.get().getForUniverse(universe).clean();
 
 		// Clean the uplayers
 		UPlayerColls.get().getForUniverse(universe).clean();
