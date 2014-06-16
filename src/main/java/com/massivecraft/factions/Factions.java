@@ -45,6 +45,13 @@ import com.massivecraft.factions.mixin.PowerMixinDefault;
 import com.massivecraft.factions.task.TaskPlayerDataRemove;
 import com.massivecraft.factions.task.TaskEconLandReward;
 import com.massivecraft.factions.task.TaskPlayerPowerUpdate;
+import com.massivecraft.massivecore.Aspect;
+import com.massivecraft.massivecore.AspectColl;
+import com.massivecraft.massivecore.MassivePlugin;
+import com.massivecraft.massivecore.Multiverse;
+import com.massivecraft.massivecore.util.MUtil;
+import com.massivecraft.massivecore.xlib.gson.Gson;
+import com.massivecraft.massivecore.xlib.gson.GsonBuilder;
 
 public class Factions extends MassivePlugin
 {
