@@ -43,7 +43,7 @@ import com.github.nowireless.factions.task.TaskEconLandReward;
 import com.github.nowireless.factions.task.TaskPlayerDataRemove;
 import com.github.nowireless.factions.task.TaskPlayerPowerUpdate;
 //import com.massivecraft.factions.adapter.BoardAdapter;
-import com.massivecraft.factions.cmd.*;
+
 import com.massivecraft.massivecore.Aspect;
 import com.massivecraft.massivecore.AspectColl;
 import com.massivecraft.massivecore.MassivePlugin;
