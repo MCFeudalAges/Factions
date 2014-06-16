@@ -5,6 +5,7 @@ import java.util.Set;
 
 import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.RelationParticipator;
+import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.massivecore.ps.PS;
 
 public interface RegionBoardInterface {
@@ -21,6 +22,8 @@ public interface RegionBoardInterface {
 	public Set<PS> getChunks(Region region);
 
 	public int getCount(Region region);
-
+	
+	public Set<Region> getOwnedRegions(Faction faction);
+	
 	public ArrayList<String> getMap(RelationParticipator observer, PS centerPs, double inDegrees);
 }

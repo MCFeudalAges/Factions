@@ -1,6 +1,7 @@
 package com.github.nowireless.factions.entity;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,6 +9,7 @@ import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.Const;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.RelationParticipator;
+import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.XColls;
 import com.massivecraft.massivecore.Aspect;
 import com.massivecraft.massivecore.ps.PS;
@@ -80,6 +82,7 @@ public class RegionBoardCollections  extends XColls<RegionBoardCollection, Regio
 		}
 		return ret;
 	}
+	
 	@Override
 	public int getCount(Region region) {
 		int ret = 0;
@@ -102,5 +105,13 @@ public class RegionBoardCollections  extends XColls<RegionBoardCollection, Regio
 			coll.clean();
 		}
 	}
-
+	
+	@Override
+	public Set<Region> getOwnedRegions(Faction faction) {
+		Set<Region> ret = new HashSet<Region>();
+		for(RegionBoardCollection coll: this.getColls()) {
+			ret.addAll(coll.getOwnedRegions(faction));
+		}
+		return ret;
+	}
 }

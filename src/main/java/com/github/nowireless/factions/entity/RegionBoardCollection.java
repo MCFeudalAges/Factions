@@ -7,6 +7,7 @@ import java.util.Set;
 import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.RelationParticipator;
+import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.massivecore.ps.PS;
 import com.massivecraft.massivecore.store.Coll;
 import com.massivecraft.massivecore.store.MStore;
@@ -106,6 +107,15 @@ public class RegionBoardCollection extends Coll<RegionBoard> implements RegionBo
 		RegionBoard regionMap = this.get(centerPs.getWorld());
 		if(regionMap == null) return null;
 		return regionMap.getMap(observer, centerPs, inDegrees);
+	}
+
+	@Override
+	public Set<Region> getOwnedRegions(Faction faction) {
+		Set<Region> ret = new HashSet<Region>();
+		for(RegionBoard regionBoard : this.getAll()) {
+			ret.addAll(regionBoard.getOwnedRegions(faction));
+		}
+		return ret;
 	}
 
 }

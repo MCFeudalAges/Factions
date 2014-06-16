@@ -9,9 +9,12 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListMap;
 
+import net.minecraft.util.io.netty.handler.codec.http.websocketx.ContinuationWebSocketFrame;
+
 import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.RelationParticipator;
+import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.UConf;
 import com.massivecraft.massivecore.ps.PS;
 import com.massivecraft.massivecore.store.Entity;
@@ -149,5 +152,20 @@ public class RegionBoard extends Entity<RegionBoard> implements RegionBoardInter
 
 			Factions.get().log("RegionMap Cleaner Removed " + regionID + " from " + ps);
 		}
+	}
+
+	@Override
+	public Set<Region> getOwnedRegions(Faction faction) {
+		Set<Region> ret = new HashSet<Region>();
+		for (Entry<PS, RegionAccess> entry : this.map.entrySet()) {
+			RegionAccess ra = entry.getValue();
+			//if(!ra.getAssociatedRegionID().equals(regionID)) continue;
+			
+			Region region = ra.getAssociatedRegion(faction);
+			if(ret.contains(region)) continue;
+			
+			ret.add(region);
+		}
+		return ret;
 	}
 }
