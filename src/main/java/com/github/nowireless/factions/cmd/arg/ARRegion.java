@@ -5,9 +5,9 @@ import org.bukkit.command.CommandSender;
 import com.github.nowireless.factions.entity.Region;
 import com.github.nowireless.factions.entity.RegionCollection;
 import com.github.nowireless.factions.entity.RegionCollections;
-import com.massivecraft.mcore.cmd.arg.ArgReaderAbstract;
-import com.massivecraft.mcore.cmd.arg.ArgResult;
-import com.massivecraft.mcore.util.Txt;
+import com.massivecraft.massivecore.cmd.arg.ArgReaderAbstract;
+import com.massivecraft.massivecore.cmd.arg.ArgResult;
+import com.massivecraft.massivecore.util.Txt;
 
 public class ARRegion extends ArgReaderAbstract<Region>{
 	public static ARRegion get(Object universe) {

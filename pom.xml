@@ -31,17 +31,17 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
-			<version>1.7.8-R0.1-SNAPSHOT</version>
+			<version>1.7.9-R0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>craftbukkit</artifactId>
-			<version>1.7.8-R0.1-SNAPSHOT</version>
+			<version>1.7.9-R0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>minecraft-server</artifactId>
-			<version>1.7.8</version>
+			<version>1.7.9</version>
 		</dependency>
 		<dependency>
 			<groupId>com.comphenix.protocol</groupId>
@@ -56,7 +56,7 @@
 		<dependency>
 			<groupId>com.massivecraft</groupId>
 			<artifactId>mcore</artifactId>
-			<version>7.1.0</version>
+			<version>7.2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.griefcraft</groupId>

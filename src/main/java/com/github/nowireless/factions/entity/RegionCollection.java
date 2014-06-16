@@ -9,9 +9,9 @@ import com.massivecraft.factions.entity.BoardColls;
 import com.massivecraft.factions.entity.UConf;
 import com.massivecraft.factions.entity.UPlayerColls;
 import com.massivecraft.factions.util.MiscUtil;
-import com.massivecraft.mcore.store.Coll;
-import com.massivecraft.mcore.store.MStore;
-import com.massivecraft.mcore.util.Txt;
+import com.massivecraft.massivecore.store.Coll;
+import com.massivecraft.massivecore.store.MStore;
+import com.massivecraft.massivecore.util.Txt;
 
 import org.bukkit.ChatColor;
 

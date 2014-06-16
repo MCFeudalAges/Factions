@@ -13,9 +13,9 @@ import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.RelationParticipator;
 import com.massivecraft.factions.entity.UConf;
-import com.massivecraft.mcore.ps.PS;
-import com.massivecraft.mcore.store.Entity;
-import com.massivecraft.mcore.xlib.gson.reflect.TypeToken;
+import com.massivecraft.massivecore.ps.PS;
+import com.massivecraft.massivecore.store.Entity;
+import com.massivecraft.massivecore.xlib.gson.reflect.TypeToken;
 
 public class RegionBoard extends Entity<RegionBoard> implements RegionBoardInterface{
 

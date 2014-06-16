@@ -1,8 +1,8 @@
 package com.massivecraft.factions.integration.lwc;
 
-import com.massivecraft.mcore.integration.IntegrationFeaturesAbstract;
+import com.massivecraft.massivecore.integration.IntegrationAbstract;;
 
-public class LwcFeatures extends IntegrationFeaturesAbstract
+public class LwcFeatures extends IntegrationAbstract
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT

@@ -1,8 +1,8 @@
 package com.massivecraft.factions.integration.herochat;
 
-import com.massivecraft.mcore.integration.IntegrationFeaturesAbstract;
+import com.massivecraft.massivecore.integration.IntegrationAbstract;;
 
-public class HerochatFeatures extends IntegrationFeaturesAbstract
+public class HerochatFeatures extends IntegrationAbstract
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT
