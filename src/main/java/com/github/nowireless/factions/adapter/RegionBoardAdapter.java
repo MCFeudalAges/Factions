@@ -10,14 +10,14 @@ import java.util.concurrent.ConcurrentSkipListMap;
 
 
 import com.github.nowireless.factions.RegionAccess;
-import com.massivecraft.mcore.ps.PS;
-import com.massivecraft.mcore.xlib.gson.JsonDeserializationContext;
-import com.massivecraft.mcore.xlib.gson.JsonDeserializer;
-import com.massivecraft.mcore.xlib.gson.JsonElement;
-import com.massivecraft.mcore.xlib.gson.JsonObject;
-import com.massivecraft.mcore.xlib.gson.JsonParseException;
-import com.massivecraft.mcore.xlib.gson.JsonSerializationContext;
-import com.massivecraft.mcore.xlib.gson.JsonSerializer;
+import com.massivecraft.massivecore.ps.PS;
+import com.massivecraft.massivecore.xlib.gson.JsonDeserializationContext;
+import com.massivecraft.massivecore.xlib.gson.JsonDeserializer;
+import com.massivecraft.massivecore.xlib.gson.JsonElement;
+import com.massivecraft.massivecore.xlib.gson.JsonObject;
+import com.massivecraft.massivecore.xlib.gson.JsonParseException;
+import com.massivecraft.massivecore.xlib.gson.JsonSerializationContext;
+import com.massivecraft.massivecore.xlib.gson.JsonSerializer;
 
 public class RegionBoardAdapter implements JsonDeserializer<Map<PS, RegionAccess>>, JsonSerializer<Map<PS, RegionAccess>> {
 	private static RegionBoardAdapter i = new RegionBoardAdapter();
