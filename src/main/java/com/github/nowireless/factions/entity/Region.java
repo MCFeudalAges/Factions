@@ -4,8 +4,8 @@ import com.massivecraft.factions.entity.BoardColls;
 import com.massivecraft.factions.entity.UConf;
 import com.massivecraft.factions.entity.UPlayerColls;
 import com.massivecraft.factions.util.MiscUtil;
-import com.massivecraft.massivecore.store.Entity;
-import com.massivecraft.massivecore.util.MUtil;
+import com.massivecraft.mcore.store.Entity;
+import com.massivecraft.mcore.util.MUtil;
 
 public class Region extends Entity<Region>{
 	public static Region get(Object oid) {

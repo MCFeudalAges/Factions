@@ -1,7 +1,7 @@
 package com.massivecraft.factions.entity;
 
 import com.massivecraft.factions.Perm;
-import com.massivecraft.massivecore.store.SenderEntity;
+import com.massivecraft.mcore.store.SenderEntity;
 
 public class MPlayer extends SenderEntity<MPlayer>
 {

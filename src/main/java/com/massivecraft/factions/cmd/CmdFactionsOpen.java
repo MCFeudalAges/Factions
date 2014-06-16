@@ -6,8 +6,8 @@ import com.massivecraft.factions.cmd.req.ReqFactionsEnabled;
 import com.massivecraft.factions.cmd.req.ReqHasFaction;
 import com.massivecraft.factions.cmd.req.ReqRoleIsAtLeast;
 import com.massivecraft.factions.event.FactionsEventOpenChange;
-import com.massivecraft.massivecore.cmd.arg.ARBoolean;
-import com.massivecraft.massivecore.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore.cmd.arg.ARBoolean;
+import com.massivecraft.mcore.cmd.req.ReqHasPerm;
 
 public class CmdFactionsOpen extends FCommand
 {

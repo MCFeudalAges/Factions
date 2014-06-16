@@ -10,8 +10,8 @@ import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.Perm;
 import com.massivecraft.factions.cmd.FCommand;
 import com.massivecraft.factions.cmd.req.ReqFactionsEnabled;
-import com.massivecraft.massivecore.cmd.req.ReqHasPerm;
-import com.massivecraft.massivecore.store.MStore;
+import com.massivecraft.mcore.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore.store.MStore;
 
 public class CmdFactionsRegionCreate extends FCommand{
 	public CmdFactionsRegionCreate() {

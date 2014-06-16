@@ -7,8 +7,8 @@ import java.util.List;
 import org.bukkit.command.CommandSender;
 
 import com.massivecraft.factions.FFlag;
-import com.massivecraft.massivecore.cmd.arg.ARAbstractSelect;
-import com.massivecraft.massivecore.util.Txt;
+import com.massivecraft.mcore.cmd.arg.ARAbstractSelect;
+import com.massivecraft.mcore.util.Txt;
 
 public class ARFFlag extends ARAbstractSelect<FFlag>
 {

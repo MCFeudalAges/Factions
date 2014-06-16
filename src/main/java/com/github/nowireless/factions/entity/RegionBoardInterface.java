@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.RelationParticipator;
-import com.massivecraft.massivecore.ps.PS;
+import com.massivecraft.mcore.ps.PS;
 
 public interface RegionBoardInterface {
 	public RegionAccess getRegionAccessAt(PS ps);

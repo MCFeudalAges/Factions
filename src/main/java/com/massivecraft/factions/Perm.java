@@ -2,7 +2,7 @@ package com.massivecraft.factions;
 
 import org.bukkit.permissions.Permissible;
 
-import com.massivecraft.massivecore.util.PermUtil;
+import com.massivecraft.mcore.util.PermUtil;
 
 public enum Perm
 {

@@ -1,8 +1,8 @@
 package com.massivecraft.factions.event;
 
-import com.massivecraft.massivecore.event.EventMassiveCore;;
+import com.massivecraft.mcore.event.MCoreEvent;
 
-public abstract class FactionsEventAbstract extends EventMassiveCore
+public abstract class FactionsEventAbstract extends MCoreEvent
 {
 
 }

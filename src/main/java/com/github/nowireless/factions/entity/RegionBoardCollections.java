@@ -9,8 +9,8 @@ import com.massivecraft.factions.Const;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.RelationParticipator;
 import com.massivecraft.factions.entity.XColls;
-import com.massivecraft.massivecore.Aspect;
-import com.massivecraft.massivecore.ps.PS;
+import com.massivecraft.mcore.Aspect;
+import com.massivecraft.mcore.ps.PS;
 
 public class RegionBoardCollections  extends XColls<RegionBoardCollection, RegionBoard> implements RegionBoardInterface {
 	private static RegionBoardCollections i = new RegionBoardCollections();

@@ -11,9 +11,9 @@ import com.massivecraft.factions.cmd.FCommand;
 import com.massivecraft.factions.cmd.req.ReqFactionsEnabled;
 import com.massivecraft.factions.entity.UConf;
 import com.massivecraft.factions.event.FactionsEventChunkChange;
-import com.massivecraft.massivecore.cmd.req.ReqHasPerm;
-import com.massivecraft.massivecore.cmd.req.ReqIsPlayer;
-import com.massivecraft.massivecore.ps.PS;
+import com.massivecraft.mcore.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore.cmd.req.ReqIsPlayer;
+import com.massivecraft.mcore.ps.PS;
 
 public class CmdFactionsRegionAddChunk extends FCommand {
 	public CmdFactionsRegionAddChunk() {

@@ -21,7 +21,7 @@ import com.massivecraft.factions.entity.UConf;
 import com.massivecraft.factions.entity.UPlayer;
 import com.massivecraft.factions.event.FactionsEventChunkChange;
 import com.massivecraft.factions.event.FactionsEventChunkChangeType;
-import com.massivecraft.massivecore.ps.PS;
+import com.massivecraft.mcore.ps.PS;
 
 
 public class LwcEngine implements Listener

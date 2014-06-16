@@ -9,8 +9,8 @@ import com.github.nowireless.factions.cmd.CmdFactionsRegionRemoveChunk;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.Perm;
 import com.massivecraft.factions.entity.MConf;
-import com.massivecraft.massivecore.cmd.HelpCommand;
-import com.massivecraft.massivecore.cmd.VersionCommand;
+import com.massivecraft.mcore.cmd.HelpCommand;
+import com.massivecraft.mcore.cmd.VersionCommand;
 
 public class CmdFactions extends FCommand
 {

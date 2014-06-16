@@ -7,10 +7,10 @@ import java.util.Set;
 import com.github.nowireless.factions.RegionAccess;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.RelationParticipator;
-import com.massivecraft.massivecore.ps.PS;
-import com.massivecraft.massivecore.store.Coll;
-import com.massivecraft.massivecore.store.MStore;
-import com.massivecraft.massivecore.util.MUtil;
+import com.massivecraft.mcore.ps.PS;
+import com.massivecraft.mcore.store.Coll;
+import com.massivecraft.mcore.store.MStore;
+import com.massivecraft.mcore.util.MUtil;
 
 public class RegionBoardCollection extends Coll<RegionBoard> implements RegionBoardInterface{
 	public RegionBoardCollection(String name) {

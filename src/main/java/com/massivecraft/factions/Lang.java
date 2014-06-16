@@ -1,6 +1,6 @@
 package com.massivecraft.factions;
 
-import com.massivecraft.massivecore.util.Txt;
+import com.massivecraft.mcore.util.Txt;
 
 public class Lang
 {
