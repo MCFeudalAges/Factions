@@ -1,4 +1,4 @@
-main: com.massivecraft.factions.Factions
+main: com.github.nowireless.factions.Factions
 name: Factions
 version: 2.4.0
 website: http://massivecraft.com/factions
