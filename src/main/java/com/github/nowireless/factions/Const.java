@@ -14,7 +14,7 @@ public class Const
 	public static final String COLLECTION_MCONF = BASENAME_+"mconf";
 	public static final String COLLECTION_REGION = BASENAME_ + "region";
 	public static final String COLLECTION_REGION_BOARD = BASENAME_ + "region-board";
-	
+	public static final String COLLECTION_ALLIED_FACTIONS = BASENAME_ + "allied-factions";	
 	public static final String ASPECT = BASENAME;
 	
 	// ASCII Map
