@@ -1,25 +1,38 @@
 package com.github.nowireless.factions.entity;
 
+import com.github.nowireless.factions.Const;
 import com.massivecraft.massivecore.Aspect;
 
 public class AlliedFactionsCollections extends XColls<AlliedFactionsCollection, AlliedFactions> {
 
+	/*
+	 * Instance and  Construct
+	 */
+	
+	private static AlliedFactionsCollections i = new AlliedFactionsCollections();
+	public static AlliedFactionsCollections get() { return i; }
+	
+	/*
+	 * Override Colls
+	 */
+	@Override
+	public AlliedFactionsCollection createColl(String collName) {
+		return new AlliedFactionsCollection(collName);
+	}
+	
 	@Override
 	public Aspect getAspect() {
-		// TODO Auto-generated method stub
-		return null;
+		return FactionColls.get().getAspect();
 	}
 
 	@Override
 	public String getBasename() {
-		// TODO Auto-generated method stub
-		return null;
+		return Const.COLLECTION_ALLIED_FACTIONS;
 	}
-
+	
 	@Override
-	public AlliedFactionsCollection createColl(String name) {
-		// TODO Auto-generated method stub
-		return null;
+	public void init() {
+		super.init();
 	}
 
 }

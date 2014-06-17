@@ -76,6 +76,11 @@ public class UConf extends Entity<UConf>
 	 */
 	public String regionIdNone = UUID.randomUUID().toString();
 	
+	/*
+	 * Special Allied Faction IDs
+	 */
+	public String alliedFactionIdNone = UUID.randomUUID().toString();
+	
 	// -------------------------------------------- //
 	// DEFAULTS
 	// -------------------------------------------- //
@@ -115,6 +120,9 @@ public class UConf extends Entity<UConf>
 	public int factionNameLengthMin = 3;
 	public int factionNameLengthMax = 16;
 	public boolean factionNameForceUpperCase = false;
+	
+	public int alliedFactionNameLengthMin = 3;
+	public int alliedFactionNameLengthMax = 16;
 	
 	// -------------------------------------------- //
 	// CLAIMS
