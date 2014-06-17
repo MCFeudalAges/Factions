@@ -15,7 +15,7 @@ public class Region extends Entity<Region>{
 	@Override
 	public Region load(Region that) {
 		this.setName(that.name);
-		this.setOwnerFaction(that.ownerFaction);
+		this.setOwnerFaction(that.ownerFactionId);
 		this.setClaimable(that.claimable);
 		this.setCreatedAtMillis(that.createdAtMillis);
 		this.setWorld(that.world);
@@ -43,7 +43,7 @@ public class Region extends Entity<Region>{
 	 */
 	private String name = null;
 
-	private String ownerFaction = null;
+	private String ownerFactionId = UConf.get(this).factionIdNone;
 
 	private long createdAtMillis = System.currentTimeMillis();
 
@@ -69,10 +69,19 @@ public class Region extends Entity<Region>{
 
 	////////////////////////////////////////////////////////////
 
+	@Deprecated
 	public String getOwnerFaction() {
-		return this.ownerFaction;
+		return this.ownerFactionId;
 	}
 
+	public String getOwningFactionId() {
+		return this.ownerFactionId;
+	}
+	
+	public Faction getOwningFaction() {
+		return FactionColls.get().get(this).get(this.getOwningFactionId());
+	}
+	
 	public String getFactionName() {
 		return factionName;
 	}
@@ -80,8 +89,8 @@ public class Region extends Entity<Region>{
 	public void setOwnerFaction(String owner) {
 		String target = owner;
 		if(target == null) return;
-		if(MUtil.equals(this.ownerFaction, target)) return;
-		this.ownerFaction = target;
+		if(MUtil.equals(this.ownerFactionId, target)) return;
+		this.ownerFactionId = target;
 		this.changed();
 	}
 
@@ -92,7 +101,12 @@ public class Region extends Entity<Region>{
 		this.factionName = name;
 		this.changed();
 	}
-
+	
+	
+	public void setOwnerFaction(Faction faction) {
+		String id = faction.getId();
+		this.setOwnerFaction(id);
+	}
 	////////////////////////////////////////////////////////////
 
 	public String getWorld() {

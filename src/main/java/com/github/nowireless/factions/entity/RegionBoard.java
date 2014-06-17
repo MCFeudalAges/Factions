@@ -9,13 +9,12 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListMap;
 
-import net.minecraft.util.io.netty.handler.codec.http.websocketx.ContinuationWebSocketFrame;
-
 import com.github.nowireless.factions.Factions;
 import com.github.nowireless.factions.RegionAccess;
 import com.github.nowireless.factions.RelationParticipator;
 import com.massivecraft.massivecore.ps.PS;
 import com.massivecraft.massivecore.store.Entity;
+import com.massivecraft.massivecore.util.MUtil;
 import com.massivecraft.massivecore.xlib.gson.reflect.TypeToken;
 
 public class RegionBoard extends Entity<RegionBoard> implements RegionBoardInterface{
@@ -154,13 +153,17 @@ public class RegionBoard extends Entity<RegionBoard> implements RegionBoardInter
 
 	@Override
 	public Set<Region> getOwnedRegions(Faction faction) {
+		String factionID = faction.getId();
+		
 		Set<Region> ret = new HashSet<Region>();
 		for (Entry<PS, RegionAccess> entry : this.map.entrySet()) {
 			RegionAccess ra = entry.getValue();
-			//if(!ra.getAssociatedRegionID().equals(regionID)) continue;
 			
 			Region region = ra.getAssociatedRegion(faction);
 			if(ret.contains(region)) continue;
+			
+			String owner = region.getOwningFactionId();
+			if(MUtil.equals(factionID, owner)) continue;
 			
 			ret.add(region);
 		}

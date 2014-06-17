@@ -1,5 +1,6 @@
 package com.github.nowireless.factions;
 
+import com.github.nowireless.factions.entity.Faction;
 import com.github.nowireless.factions.entity.Region;
 import com.github.nowireless.factions.entity.RegionCollections;
 
@@ -9,7 +10,7 @@ public class RegionAccess {
 
 	public RegionAccess withAssociatedRegion(String regionID) { return valueOf(regionID); }
 	/*
-	 * Private COnstructer
+	 * Private Constructer
 	 */
 	private RegionAccess(String regionID) {
 		if(regionID == null) throw new IllegalArgumentException("ownerFaction is null");
@@ -22,5 +23,13 @@ public class RegionAccess {
 
 	public Region getAssociatedRegion(Object universe) {
 		return RegionCollections.get().get(universe).get(this.getAssociatedRegionID());
+	}
+	
+	public Faction getOwningFaction(Object universe) {
+		return getAssociatedRegion(universe).getOwningFaction();
+	}
+	
+	public String getOwningFactionId(Object universe) {
+		return getAssociatedRegion(universe).getOwningFactionId();
 	}
 }
