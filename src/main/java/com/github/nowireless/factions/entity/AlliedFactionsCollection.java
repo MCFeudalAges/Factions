@@ -28,6 +28,7 @@ public class AlliedFactionsCollection extends Coll<AlliedFactions> {
 	@Override
 	public void init() {
 		super.init();
+		this.createSpecialAlliances();
 	}
 	
 	@Override 
