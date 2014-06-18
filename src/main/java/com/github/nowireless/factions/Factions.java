@@ -22,6 +22,7 @@ import com.github.nowireless.factions.chat.tag.ChatTagRoleprefix;
 import com.github.nowireless.factions.chat.tag.ChatTagRoleprefixforce;
 import com.github.nowireless.factions.chat.tag.ChatTagTitle;
 import com.github.nowireless.factions.cmd.CmdFactions;
+import com.github.nowireless.factions.entity.AlliedFactionsCollections;
 import com.github.nowireless.factions.entity.Faction;
 import com.github.nowireless.factions.entity.FactionColls;
 import com.github.nowireless.factions.entity.MConfColl;
@@ -121,6 +122,7 @@ public class Factions extends MassivePlugin
 		UConfColls.get().init();
 		UPlayerColls.get().init();
 		FactionColls.get().init();
+		AlliedFactionsCollections.get().init();
 		RegionCollections.get().init();
 		RegionBoardCollections.get().init();
 		//BoardColls.get().init();
