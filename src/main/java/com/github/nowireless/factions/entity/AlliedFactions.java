@@ -1,12 +1,20 @@
 package com.github.nowireless.factions.entity;
 
+import java.lang.reflect.Type;
+import java.util.Set;
+
 import com.github.nowireless.factions.Lang;
 import com.github.nowireless.factions.util.MiscUtil;
 import com.massivecraft.massivecore.ps.PS;
 import com.massivecraft.massivecore.store.Entity;
 import com.massivecraft.massivecore.util.MUtil;
+import com.massivecraft.massivecore.xlib.gson.reflect.TypeToken;
+
+
 
 public class AlliedFactions extends Entity<AlliedFactions>{
+	public static final transient Type SET_TYPE = new TypeToken<Set<String>>(){}.getType();
+	
 	public static AlliedFactions get(Object oid) {
 		return AlliedFactionsCollections.get().get2(oid);
 	}
@@ -37,7 +45,11 @@ public class AlliedFactions extends Entity<AlliedFactions>{
 	private PS home = null;
 	
 	private Boolean open = null;
-
+	
+	private String leaderfactionId = null;
+	
+	public AlliedFactions() {
+	}
 	
 	public String getName() {
 		return this.name;
@@ -171,5 +183,43 @@ public class AlliedFactions extends Entity<AlliedFactions>{
 		this.changed();
 	}
 	
+	public void addFaction(Faction faction) {
+		String oldAlliedId = faction.getAlliedFactionId();
+		
+		if(MUtil.equals(this.getId(), oldAlliedId)) return;
+		
+		faction.setAlliedFaction(this);
+	}
 	
+	public void addFaction(String id) {
+		Faction faction = FactionColls.get().get(this).get(id);
+		if(faction == null) return;
+		
+		this.addFaction(faction);
+	}
+	
+	public void removeFaction(Faction faction) {
+		String alliedId = faction.getAlliedFactionId();
+		
+		if(!MUtil.equals(this.getId(), alliedId)) return;
+		
+		faction.setAlliedFactionId(UConf.get(this).alliedFactionIdNone);
+	}
+	
+	public String getLeaderFactionId() {
+		return this.leaderfactionId;
+	}
+	
+	public void setLeaderFaction(String id) {
+		String target = id;
+		if(MUtil.equals(this.getLeaderFactionId(), target)) return;
+		
+		this.leaderfactionId = target;
+		
+		this.changed();
+	}
+	
+	public void setLeaderFaction(Faction faction) {
+		this.setLeaderFaction(faction.getId());
+	}
 }
