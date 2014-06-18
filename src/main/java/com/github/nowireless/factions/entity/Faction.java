@@ -53,6 +53,7 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 		this.setRelationWishes(that.relationWishes);
 		this.setFlags(that.flags);
 		this.setPerms(that.perms);
+		this.setAlliedFactionId(that.alliedFactionId);
 		
 		return this;
 	}
@@ -123,6 +124,9 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 	// The perm overrides are modifications to the default values.
 	// Null means default for the universe.
 	private Map<FPerm, Set<Rel>> perms = null;
+	
+	// The ID for the AlliedFactions
+	private String alliedFactionId = UConf.get(this).alliedFactionIdNone;
 	
 	// -------------------------------------------- //
 	// FIELD: id
@@ -733,6 +737,30 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 		//System.out.println(Factions.get().gson.toJson(perms, new TypeToken<Map<FPerm, Set<Rel>>>(){}.getType()));
 		
 		this.setPerms(perms);
+	}
+	
+	/*
+	 * Allied Factions
+	 */
+	public String getAlliedFactionId() {
+		return this.alliedFactionId;
+	}
+	
+	public AlliedFactions getAlliedFaction() {
+		return AlliedFactionsCollections.get().get(this).get(this.getAlliedFactionId());
+	}
+	
+	public void setAlliedFactionId(String id) {
+		String target = id;
+		if(MUtil.equals(this.alliedFactionId, target)) return;
+		AlliedFactions allied = AlliedFactionsCollections.get().get(this).get(id);
+		if(allied == null) return;
+		this.alliedFactionId = id;
+		this.changed();
+	}
+	
+	public void setAlliedFaction(AlliedFactions allied) {
+		this.setAlliedFactionId(allied.getId());
 	}
 	
 	// -------------------------------------------- //
